@@ -9,11 +9,17 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
+    devtool: 'inline-source-map'
+    ,
+    devServer:{
+        static: './dist'
+    }
+    ,
     module: {
         rules: [
             {
                 test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader','sass-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -21,9 +27,9 @@ module.exports = {
             }
         ]
     },
-    plugins:[
+    plugins: [
         new HtmlWebpackPlugin({
             title: 'Restaurant page',
         })
-    ]
+    ],
 }
