@@ -1,9 +1,11 @@
 import { createElement, setAttributes } from "../util";
 
-function navBar(){
+function navBar() {
     const navBar = createElement('nav');
-    
-    const listItems=[
+    const ul = createElement('ul')
+    const navBrand = createElement('div')
+
+    const listItems = [
         {
             title: 'Menu'
         },
@@ -17,13 +19,18 @@ function navBar(){
             title: 'About'
         },
     ]
-    
-    for (const i of listItems){
-        const item = createElement('div')
-        item.textContent= i.title;
-        navBar.appendChild(item)
-    }
 
+    for (const i of listItems) {
+        const item = createElement('li')
+        setAttributes(item,{class: "nav-item"})
+        item.textContent = i.title;
+        ul.appendChild(item)
+    }
+    navBrand.classList.add('Nav-brand')
+    navBrand.innerHTML="Anime Food"
+    navBar.appendChild(navBrand)
+    navBar.appendChild(ul)
+    navBar.classList.add('nav-bar')
     return navBar
 }
 
