@@ -5,6 +5,7 @@ import img3 from "../img/scrollbar/balls.gif";
 import img4 from "../img/scrollbar/noodle.gif";
 import "../sass/scroll.scss";
 
+
 const images = [img1, img2, img3, img4];
 
 function createImageSlider() {
@@ -70,7 +71,6 @@ function createImageSlider() {
     });
 
     function changePosition(link) {
-        // console.log(link)
         links.forEach((linkItem) => {
             linkItem.classList.remove("active");
         });
@@ -87,6 +87,12 @@ function createImageSlider() {
 
     }
 
+    function setTime() {
+        const current = activeLink >= links.length - 1 ? 0 : activeLink + 1
+        const link = links[current]
+        changePosition(link)
+    }
+
     btn1.innerHTML = "&#10094;";
     btn2.innerHTML = "&#10093;";
 
@@ -99,6 +105,7 @@ function createImageSlider() {
     navLinks.appendChild(ul);
     container.appendChild(navLinks);
 
+    setInterval(setTime, 4000)
     return container;
 }
 

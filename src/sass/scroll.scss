@@ -1,18 +1,14 @@
-// body {
-//   --height: 30rem;
-//   --width: 100%;
-// }
 @import 'sizes';
 
 .content {
   height: $height;
   width: $img-width;
+  filter: brightness(90%);
 }
 
 .image-slider{
   display: flex;
   flex-direction: column;
-  // align-items: center;
   padding-top: 1rem;
 }
 
@@ -20,16 +16,20 @@
   display: flex;
   flex-wrap: nowrap;
   transform: translate3d(0, 0, 0);
-  transition: transform .5s ease-in-out;
+   transition: transform .9s cubic-bezier(.57,.21,.69,1.25);
+  
 }
 
 .window {
-  border: 2px solid black;
-  // width: ($width);
+
+  align-self: center;
+  width: 80vw;
   overflow: hidden;
   height: ($height);
   display: flex;
   border-radius: 1rem;
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .navLinks {
@@ -51,10 +51,9 @@
   margin: 10px;
   list-style: none;
   cursor: pointer;
-  background-color: #cccccc;
   padding: 5px;
   border-radius: 50px;
-  border: black 5px solid;
+  border: black 1px solid;
 }
 
 .links:hover {
@@ -94,7 +93,7 @@
 .right {
   right: 0;
   border-radius: 3px 0 0 3px;
-  margin-right: $body-padding;
+  margin-right: 10vw;
 
 }
 

@@ -11,8 +11,6 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding-inline: $body-padding;
-    // max-width: 1200px;
-    // font-size: 1.2rem;
 }
 
 nav {
@@ -23,30 +21,23 @@ nav {
     grid-template-columns: repeat(4, 1fr);
     place-content: center;
     font-size: larger;
-    // background-color: #fab3ad;
-    // background-color: #DE9C94;
     background-color: rgba(255, 232, 232, 1);
     padding-inline: 1rem;
     border-radius: 10px;
 
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     ul {
         list-style: none;
         grid-column-start: 3;
         grid-column-end: 5;
-
         display: flex;
-        // flex-direction: column;
         justify-content: space-around;
-
         text-align: center;
     }
 
     li {
         font-weight: 500;
-        // opacity: 0.5;
         position: relative;
-        // color: hotpink;
-        // overflow: hidden;
     }
     li::after {
         content: "";
@@ -55,9 +46,7 @@ nav {
         width: 100%;
         left: 0;
         bottom: 0;
-        background-color: orangered;
-        // opacity: 1;
-        
+        background-color: orangered;        
         translate: $translate;
         scale: $width 1;
         transition: scale 300ms,
@@ -73,7 +62,6 @@ nav {
     }
 
     li:hover + li{
-        // color: red;
         $translate: -100%;
     }
 
