@@ -1,0 +1,107 @@
+// body {
+//   --height: 30rem;
+//   --width: 100%;
+// }
+@import 'sizes';
+
+.content {
+  height: $height;
+  width: $img-width;
+}
+
+.image-slider{
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  padding-top: 1rem;
+}
+
+#wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  transform: translate3d(0, 0, 0);
+  transition: transform .5s ease-in-out;
+}
+
+.window {
+  border: 2px solid black;
+  // width: ($width);
+  overflow: hidden;
+  height: ($height);
+  display: flex;
+  border-radius: 1rem;
+}
+
+.navLinks {
+  text-align: center;
+  width: ($width);
+  align-self: center;
+}
+
+.navLinks ul {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.links {
+  float: left;
+  text-align: center;
+  margin: 10px;
+  list-style: none;
+  cursor: pointer;
+  background-color: #cccccc;
+  padding: 5px;
+  border-radius: 50px;
+  border: black 5px solid;
+}
+
+.links:hover {
+  background-color: #ffff00;
+}
+
+.links.active {
+  background-color: #333333;
+  color: #ffffff;
+  outline-width: 7px;
+}
+
+.links.active:hover {
+  background-color: #484848;
+  color: #ffffff;
+}
+
+.btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 1.2rem;
+  width: auto;
+  margin-top: -22px;
+  padding: 3rem 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+}
+
+.right {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  margin-right: $body-padding;
+
+}
+// .left{
+//   position: absolute;
+// }
+/* On hover, add a black background color with a little bit see-through */
+.left:hover,
+.right:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

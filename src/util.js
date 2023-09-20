@@ -13,8 +13,15 @@ function setAttributes(element, attributes){
     }
 }
 
+function createSetElement(type, attributes={}){
+    const element = createElement(type)
+    setAttributes(element, attributes)
+    return element
+}
+
 export {
     getElement,
     createElement,
-    setAttributes
+    setAttributes,
+    createSetElement,
 }
