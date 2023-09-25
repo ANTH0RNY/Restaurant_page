@@ -1,4 +1,5 @@
 import { createElement, setAttributes } from "../util";
+import '../sass/navBar.scss'
 
 function navBar() {
     const navBar = createElement('nav');

@@ -1,0 +1,76 @@
+@import '_sizes';
+
+nav {
+    $width:0;
+    $translate: 0;
+    font-family: $bento-font;
+    align-self: center;
+    width: $body-size;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center;
+    font-size: larger;
+    background-color: rgba(255, 232, 232, 1);
+    padding-inline: 1rem;
+    border-radius: 10px;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    ul {
+        list-style: none;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    li {
+        font-weight: 500;
+        position: relative;
+    }
+    li::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: orangered;        
+        translate: $translate;
+        scale: $width 1;
+        transition: scale 300ms,
+        translate 500ms;
+    }
+    li:has(+ :hover){
+    //    color: red;
+       $translate: 100%;
+    }
+
+    li:hover::after{
+        scale: 1 1;
+    }
+
+    li:hover + li{
+        $translate: -100%;
+    }
+
+    li:hover,
+    li:focus-visible {
+        opacity: 1;
+        $width: 1;
+    }
+
+    .Nav-brand {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+}
+.nav-item{
+    font-family: $bento-font;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
