@@ -1,15 +1,16 @@
 import createImageSlider from "../components/scroll";
 import createMainBody from "../components/body";
-// import { createSetElement } from "../util";
+import { createSetElement } from "../util";
 
-function HomeView(mountPoint) {
+function HomeView() {
     const imageSlider = createImageSlider()
 
-    // const main = createSetElement("div", { class: "body main" })
+    const main = createSetElement("div", { class: "Home" })
     const mainBody=createMainBody()
-    mountPoint.appendChild(imageSlider)
-    mountPoint.appendChild(mainBody)
-
+    main.appendChild(imageSlider)
+    main.appendChild(mainBody)
+    
+    return main
 }
 
 export default HomeView

@@ -1,0 +1,76 @@
+@import 'sizes';
+
+.about-wrapper{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    // place-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+}
+.about-title{
+    font-family: $bento-font;
+    font-size: 3rem;
+    font-weight: lighter;
+    
+    text-align: center;
+    color: orangered;
+    text-transform: capitalize;
+}
+
+.about-wrapper p{
+    font-family: $hangyaku-font;
+    font-size: 1.5rem;
+    padding-inline: 3rem;
+}
+
+.history{
+    h3{
+        font-family: $trial-font;
+        font-size: 2rem;
+        // font-weight: lighter;
+        font-style: italic;
+    }
+}
+
+.about-chef{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    h2{
+        font-family: $trial-font;
+        font-size: 2rem;
+        // font-weight: lighter;
+        font-style: italic;
+        align-self: center;
+    }
+    
+    h3{
+        font-family: $trial-font;
+        font-size: 1.5rem;
+        font-weight: light;
+        // font-style: italic;
+
+        text-align: center;
+    }
+    .chef-image{
+        width: 100px;
+        border-radius: 50%;
+        align-self: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+}
+.location{
+    display: flex;
+    align-items: center;
+    .location-icon{
+        height: 5rem;
+        flex: 0 0 auto;
+        // padding-right: 0;
+    }
+    &>*{
+        padding: 0;
+    }
+}

@@ -3,6 +3,7 @@ import { getElement, createSetElement } from "./util";
 import navBar from "./components/navbar";
 import createMenu from "./components/menu";
 import HomeView from './views/HomeView'
+import AboutUs from "./components/About";
 
 console.log("hello, World!");
 
@@ -15,4 +16,4 @@ const menu = createMenu();
 body.appendChild(navbar);
 body.appendChild(main);
 // HomeView(main)
-main.appendChild(menu);
+main.appendChild(AboutUs());

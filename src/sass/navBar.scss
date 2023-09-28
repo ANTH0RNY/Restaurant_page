@@ -1,7 +1,7 @@
-@import '_sizes';
+@import "_sizes";
 
 nav {
-    $width:0;
+    $width: 0;
     $translate: 0;
     font-family: $bento-font;
     align-self: center;
@@ -10,11 +10,13 @@ nav {
     grid-template-columns: repeat(4, 1fr);
     place-content: center;
     font-size: larger;
-    background-color: rgba(255, 232, 232, 1);
+    // background-color: rgba(255, 232, 232, 1);
+    background-color: rgba(255,69,0, .5);
     padding-inline: 1rem;
     border-radius: 10px;
 
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
     ul {
         list-style: none;
         grid-column-start: 3;
@@ -28,6 +30,7 @@ nav {
         font-weight: 500;
         position: relative;
     }
+
     li::after {
         content: "";
         position: absolute;
@@ -35,22 +38,22 @@ nav {
         width: 100%;
         left: 0;
         bottom: 0;
-        background-color: orangered;        
+        background-color: orangered;
         translate: $translate;
         scale: $width 1;
-        transition: scale 300ms,
-        translate 500ms;
-    }
-    li:has(+ :hover){
-    //    color: red;
-       $translate: 100%;
+        transition: scale 300ms, translate 500ms;
     }
 
-    li:hover::after{
+    li:has(+ :hover) {
+        //    color: red;
+        $translate: 100%;
+    }
+
+    li:hover::after {
         scale: 1 1;
     }
 
-    li:hover + li{
+    li:hover+li {
         $translate: -100%;
     }
 
@@ -69,8 +72,15 @@ nav {
         font-weight: bolder;
     }
 }
-.nav-item{
+
+.nav-item {
     font-family: $bento-font;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+@media (max-width: $breakpoint) {
+    .nav-item{
+        font-size: initial;
+    }
 }
