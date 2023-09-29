@@ -1,4 +1,5 @@
 import { createSetElement } from "../util";
+import createContact from "./contacts";
 import img1 from '../img/icons/location.gif'
 import img2 from '../img/chef.jpg'
 import '../sass/about.scss'
@@ -111,6 +112,7 @@ function AboutUs() {
 
     wrapper.appendChild(location)
     wrapper.appendChild(Map);
+    wrapper.appendChild(createContact())
 
     return wrapper;
 }

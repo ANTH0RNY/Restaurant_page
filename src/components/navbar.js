@@ -10,9 +10,9 @@ function navBar() {
         {
             title: 'Menu'
         },
-        {
-            title: 'Contacts'
-        },
+        // {
+        //     title: 'Contacts'
+        // },
         {
             title: 'Reservation'
         },
