@@ -19,9 +19,16 @@ function createSetElement(type, attributes={}){
     return element
 }
 
+function createFullElement(type, attributes={}, content=''){
+    const element=createSetElement(type, attributes)
+    element.innerHTML=content
+    return element
+}
+
 export {
     getElement,
     createElement,
     setAttributes,
     createSetElement,
+    createFullElement
 }

@@ -1,0 +1,84 @@
+@import 'sizes';
+
+.res{
+    padding: 1rem;
+    // height: 90vh;
+    display: flex;
+    flex-direction: column;
+    .reservation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        align-self: center;
+        width: 50%;
+        aspect-ratio: 1/1.2;
+        // border-color: silver;
+        border: none;
+        border-radius: 2rem;
+        padding-inline: 3rem;
+        // max-width: 25rem;
+        padding-bottom: 2rem;
+        box-shadow: orangered 0px 3px 8px;
+    }
+    .form-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // align-items: center;
+        &>*{
+            margin: 1rem 0;
+            // max-width: 20rem;
+            border-radius: .5rem;
+            height: 2rem;
+            font-size: 1rem;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border: none;
+            outline: none;
+            padding-left: 1rem;
+        }
+    }
+
+    .legend{
+        font-family: $bento-font;
+        text-align: center;
+        font-size: 3rem;
+        color: orangered;
+        font-weight: lighter;
+    }
+    .request{
+        height: 150px;
+        padding-top: 1rem;
+    }
+    .button{
+        width: max-content;
+        padding: .5rem 2rem;
+        border-radius: 1rem;
+        font-family: $bento-font;
+        font-size: 1.3rem;
+        align-self: center;
+        margin-top: 2rem;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        color: orangered;
+        background-color: rgba(255, 232, 232, 1);
+
+        transition: all 1s;
+    }
+    .button:hover{
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+    ::placeholder{
+        font-family: $trial-font;
+        font-size: 1.2rem;
+    }
+    .selector{
+        font-family: $hangyaku-font;
+        font-size: 1.5rem;
+        padding-inline: 1rem;
+    }
+    .options{
+        font-family: $trial-font;
+    }
+}
