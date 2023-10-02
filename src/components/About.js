@@ -5,10 +5,13 @@ import img2 from '../img/chef.jpg'
 import '../sass/about.scss'
 
 function AboutUs() {
+    const body=createSetElement('section',{
+        class:"wrapper-section"
+    })
     const wrapper = createSetElement("div", {
         class: "about-wrapper",
     });
-
+    body.appendChild(wrapper)
     /*
       1. Location
       2. History
@@ -114,7 +117,7 @@ function AboutUs() {
     wrapper.appendChild(Map);
     wrapper.appendChild(createContact())
 
-    return wrapper;
+    return body;
 }
 
 export default AboutUs;

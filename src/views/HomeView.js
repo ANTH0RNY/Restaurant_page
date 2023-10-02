@@ -5,7 +5,7 @@ import { createSetElement } from "../util";
 function HomeView() {
     const imageSlider = createImageSlider()
 
-    const main = createSetElement("div", { class: "Home" })
+    const main = createSetElement("section", { class: "wrapper-section" })
     const mainBody=createMainBody()
     main.appendChild(imageSlider)
     main.appendChild(mainBody)

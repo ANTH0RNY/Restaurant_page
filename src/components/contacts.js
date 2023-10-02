@@ -14,15 +14,15 @@ const contactInfo=createSetElement("div",{
 })
 const phone=createFullElement('p',{
     class:"phone info"
-}, `<span><img src=${img1}/></span> +2547123456789`)
+}, `<span><img src=${img1} alt="phone number"/></span> +2547123456789`)
 const address=createFullElement('p',{
     class:"address"
 },`
-    <span><img src=${img2}/></span> Waiyaki Way, Church Rd, P.O. Box: 67631 - 00200<br> Nairobi Nairobi Kenya
+    <span><img src=${img2} alt=""address/></span> Waiyaki Way, Church Rd, P.O. Box: 67631 - 00200<br> Nairobi Nairobi Kenya
 `)
 const email=createFullElement('p',{
     class: "email"
-},`<span><img src=${img3}/></span>animefood@gmail.com`)
+},`<span><img src=${img3} alt="email"/></span>animefood@gmail.com`)
 
 contactInfo.appendChild(phone)
 contactInfo.appendChild(email)

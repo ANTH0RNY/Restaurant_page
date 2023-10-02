@@ -1,4 +1,5 @@
-import { createElement, setAttributes } from "../util";
+import { createElement, setAttributes, createFullElement } from "../util";
+import listItems from "./navItems";
 import '../sass/navBar.scss'
 
 function navBar() {
@@ -6,33 +7,35 @@ function navBar() {
     const ul = createElement('ul')
     const navBrand = createElement('div')
 
-    const listItems = [
-        {
-            title: 'Menu'
-        },
-        // {
-        //     title: 'Contacts'
-        // },
-        {
-            title: 'Reservation'
-        },
-        {
-            title: 'About'
-        },
-    ]
 
-    for (const i of listItems) {
-        const item = createElement('li')
-        setAttributes(item,{class: "nav-item"})
-        item.textContent = i.title;
-        ul.appendChild(item)
-    }
-    navBrand.classList.add('Nav-brand')
-    navBrand.innerHTML="Anime Food"
+    listItems.forEach((value, index) => {
+        if (index === 0) {
+            navBrand.classList.add('Nav-brand')
+            navBrand.addEventListener('click', () => {
+                addClass()
+                value.el.classList.remove('not-visible')
+            })
+            navBrand.innerHTML = "Anime Food"
+        }
+        else {
+            const item = createFullElement('li', { class: "nav-item" }, value.title)
+            item.addEventListener('click', () => {
+                console.log(`hello, World ${index}`);
+                addClass()
+                value.el.classList.remove('not-visible')
+            })
+            ul.appendChild(item)
+        }
+    })
     navBar.appendChild(navBrand)
     navBar.appendChild(ul)
     navBar.classList.add('nav-bar')
     return navBar
 }
 
+function addClass() {
+    listItems.forEach((value) => {
+        value.el.classList.add('not-visible')
+    })
+}
 export default navBar

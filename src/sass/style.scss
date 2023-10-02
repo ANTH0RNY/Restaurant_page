@@ -45,4 +45,10 @@ body {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
     padding-bottom: 2rem;
     border-radius: 1rem;
+    margin-bottom: 2rem;
+
+}
+.not-visible{
+    opacity: 0;
+    display: none;
 }

@@ -2,9 +2,13 @@ import { createSetElement, createFullElement } from "../util";
 import "../sass/reservation.scss"
 
 function createReservation() {
+    const body = createSetElement('section', {
+        class:"wrapper-section"
+    })
     const wrapper = createSetElement("div", {
         class: "res",
     })
+    body.appendChild(wrapper)
     const form = createSetElement('fieldset', {
         class: 'reservation'
     })
@@ -93,7 +97,7 @@ function createReservation() {
     form.appendChild(btn)
     wrapper.appendChild(form)
 
-    return wrapper
+    return body
 }
 
 export default createReservation

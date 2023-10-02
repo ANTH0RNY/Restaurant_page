@@ -61,6 +61,7 @@ nav {
     li:focus-visible {
         opacity: 1;
         $width: 1;
+        cursor: pointer;
     }
 
     .Nav-brand {
@@ -70,6 +71,9 @@ nav {
         align-items: center;
         font-size: 3rem;
         font-weight: bolder;
+    }
+    .Nav-brand:hover{
+        cursor: pointer;
     }
 }
 

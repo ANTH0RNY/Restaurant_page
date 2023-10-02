@@ -3,7 +3,9 @@ import menuItem from "./menuItems";
 import '../sass/menu.scss'
 
 function createMenu() {
+  const wrapper=createSetElement('section', {class: "wrapper-section"})
   const body = createSetElement("div", { class: "menuBody" });
+  wrapper.appendChild(body)
 
   menuItem.forEach((value, index) => {
     const menuPart = createSetElement("div", {
@@ -48,7 +50,7 @@ function createMenu() {
     body.appendChild(menuPart);
   });
 
-  return body;
+  return wrapper;
 }
 
 export default createMenu
