@@ -6,13 +6,13 @@ module.exports = {
     mode: "development",
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         clean: true,
     },
     devtool: 'inline-source-map'
     ,
     devServer: {
-        static: './dist'
+        static: './docs'
     }
     ,
     module: {
